@@ -40,32 +40,29 @@ The character `'l'` at index 0 is the first character that does not occur at any
 ## Solution
 
 **Language:** Java  
-**Runtime:** 34 ms (beats 15.94%)  
-**Memory:** 46.7 MB (beats 93.54%)  
-**Submitted:** 2026-08-11T08:56:09.026Z  
+**Runtime:** 32 ms (beats 30.61%)  
+**Memory:** 47.1 MB (beats 40.02%)  
+**Submitted:** 2026-08-11T08:57:27.024Z  
 
 ```java
-
-
 class Solution {
     public int firstUniqChar(String s) {
-        HashMap<Character, Integer> mp = new HashMap<>();
 
-        for (char a : s.toCharArray()) {
-            mp.put(a, mp.getOrDefault(a, 0) + 1);
+        HashMap<Character, Integer> count = new HashMap<>();
+
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            count.put(ch, count.getOrDefault(ch, 0) + 1);
         }
 
-        for (int i = 0; i < s.length(); i++) {
-            if (mp.get(s.charAt(i)) == 1) {
-                return i;
-            }
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            if(count.get(ch) == 1) return i;
         }
 
         return -1;
     }
 }
-
-
 ```
 
 ---
