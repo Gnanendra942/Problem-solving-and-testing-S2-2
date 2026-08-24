@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/0217-contains-duplicate" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0283-move-zeroes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/0867-transpose-matrix" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1314-matrix-block-sum" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1704-determine-if-string-halves-are-alike" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/compare-the-triplets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/diagonal-difference" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/matrix-rotation-algo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/multiply-2-matrices4144" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/time-conversion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/two-strings" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

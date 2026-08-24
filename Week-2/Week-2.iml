@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/find-the-highest-altitude" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/group-anagrams" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/maximum-subarray" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/remove-duplicates-from-sorted-array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/remove-element" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/running-sum-of-1d-array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/shuffle-the-array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/top-k-frequent-elements" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
