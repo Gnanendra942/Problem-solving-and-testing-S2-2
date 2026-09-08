@@ -431,37 +431,170 @@ The **Applied Java Engineering Lab Track** focuses on practical, production-leve
 
 ---
 
-### 🧪 Detailed Lab System Specifications
+### 🧪 Detailed Lab System Specifications & Implementations
 
 #### 1. Salary Transformation System (Experiment 1)
-- **Problem:** Given $N$ employee compensation records, apply a 10% raise immutably without imperative iteration (`for`/`while`).
-- **Design:** Constructs a sequential `Stream<Integer>` over an `ArrayList<Integer>`, applies `.map(salary -> salary + (salary * 10 / 100))`, and terminates with `.forEach()`.
-- **Run:** `cd "Lab Tasks/01-Salary-Transformation-System" && javac Task1.java && java Task1`
+- **Directory:** [`01-Salary-Transformation-System`](./Lab%20Tasks/01-Salary-Transformation-System/) &nbsp;\|&nbsp; **Source:** [`Task1.java`](./Lab%20Tasks/01-Salary-Transformation-System/Task1.java)
+- **Problem Statement:** Given a collection of $N$ employee salaries, compute and output a 10% raise on each salary immutably without using imperative `for` or `while` mutation loops.
+- **Architectural Approach:** Constructs a sequential `Stream<Integer>` from an `ArrayList<Integer>`. Maps each element via `.map(salary -> salary + (salary * 10 / 100))` and streams each result directly to output via `.forEach(salary -> System.out.print(salary + " "))`.
+- **Complexity:** Time: $\mathcal{O}(N)$ &nbsp;|&nbsp; Space: $\mathcal{O}(N)$
+- **Input & Output:**
+  ```text
+  Input:                Output:
+  3                     1100 2200 3300
+  1000 2000 3000
+  ```
+- **Canonical Implementation:**
+  ```java
+  salaries.stream()
+          .map(salary -> salary + (salary * 10 / 100))
+          .forEach(salary -> System.out.print(salary + " "));
+  ```
+- **Execution:** `cd "Lab Tasks/01-Salary-Transformation-System" && javac Task1.java && java Task1`
+
+---
 
 #### 2. Real-Time Stream Analytics Engine (Experiment 2)
-- **Problem:** Ingest high-volume `(Sensor ID, Temperature)` telemetry, eliminate readings $\le 50$, compute per-sensor averages, and project entries ordered descending by average temperature.
-- **Design:** Employs `map.computeIfAbsent(id, k -> new ArrayList<>()).add(temp)` during ingestion. Processes entries through `entrySet().stream()`, evaluating averages via `IntStream.average().orElse(0.0)` and sorting via `Double.compare(b.getValue(), a.getValue())`.
-- **Run:** `cd "Lab Tasks/02-RealTime-Stream-Analytics-Engine" && javac Task2.java && java Task2`
+- **Directory:** [`02-RealTime-Stream-Analytics-Engine`](./Lab%20Tasks/02-RealTime-Stream-Analytics-Engine/) &nbsp;\|&nbsp; **Source:** [`Task2.java`](./Lab%20Tasks/02-RealTime-Stream-Analytics-Engine/Task2.java)
+- **Problem Statement:** Ingest a high-throughput stream of `(Sensor ID, Temperature)` readings. Discard any noisy reading where temperature $\le 50$, compute the mean temperature for each active sensor, and output the sensors ordered descending by average temperature.
+- **Architectural Approach:** Uses a hash-mapped multi-value bucket `Map<String, List<Integer>>` populated via `map.computeIfAbsent(id, k -> new ArrayList<>()).add(temp)` during telemetry ingestion. Transforms `map.entrySet()` into `SimpleEntry<String, Double>` pairs via `.mapToInt(Integer::intValue).average().orElse(0.0)`, sorts with a custom comparator (`Double.compare(b.getValue(), a.getValue())`), and streams the output.
+- **Complexity:** Time: $\mathcal{O}(N + U \log U)$ ($U = \text{unique sensor IDs}$) &nbsp;|&nbsp; Space: $\mathcal{O}(N)$
+- **Input & Output:**
+  ```text
+  Input:                Output:
+  4                     S3 80.0
+  S1 60                 S1 65.0
+  S2 45
+  S1 70
+  S3 80
+  ```
+- **Canonical Implementation:**
+  ```java
+  map.entrySet().stream()
+          .map(e -> new AbstractMap.SimpleEntry<>(
+                  e.getKey(),
+                  e.getValue().stream().mapToInt(Integer::intValue).average().orElse(0.0)))
+          .sorted((a, b) -> Double.compare(b.getValue(), a.getValue()))
+          .forEach(e -> System.out.println(e.getKey() + " " + e.getValue()));
+  ```
+- **Execution:** `cd "Lab Tasks/02-RealTime-Stream-Analytics-Engine" && javac Task2.java && java Task2`
 
-#### 3. Maximum Profit Analyzer (Experiment 3)
-- **Problem:** Identify the contiguous period of operations yielding peak cumulative profitability across a fluctuating financial sequence.
-- **Design:** Implements an on-the-fly streaming variant of Kadane's algorithm. For each incoming ledger value, the engine updates `currentSum = Math.max(value, currentSum + value)` and locks in `maxSum = Math.max(maxSum, currentSum)` using $O(1)$ auxiliary variables.
-- **Run:** `cd "Lab Tasks/03-Maximum-Profit-Analyzer-Kadane" && javac Task3.java && java Task3`
+---
 
-#### 4. Intelligent DNA Pattern Search (Experiment 4)
-- **Problem:** Detect all starting locus offsets of a target genomic subsequence within a lengthy chromosome sequence without quadratic time degradation.
-- **Design:** Knuth-Morris-Pratt (KMP) engine. Precomputes the $\pi$ Longest Prefix Suffix (`lps`) table of size $M$ in $O(M)$ time. During matching over length $N$, mismatched characters cause the pattern cursor to fall back to `lps[j-1]` while the text index advances monotonically.
-- **Run:** `cd "Lab Tasks/04-DNA-Pattern-Search-KMP" && javac Task4.java && java Task4`
+#### 3. Maximum Profit Analyzer Using Kadane's Algorithm (Experiment 3)
+- **Directory:** [`03-Maximum-Profit-Analyzer-Kadane`](./Lab%20Tasks/03-Maximum-Profit-Analyzer-Kadane/) &nbsp;\|&nbsp; **Source:** [`Task3.java`](./Lab%20Tasks/03-Maximum-Profit-Analyzer-Kadane/Task3.java)
+- **Problem Statement:** Given an array of financial increments and decrements over time, find the contiguous subarray that yields the highest cumulative profit.
+- **Architectural Approach:** Single-pass greedy dynamic programming via **Kadane's Algorithm**. Tracks local optimum `currentSum = Math.max(value, currentSum + value)` and locks in global optimum `maxSum = Math.max(maxSum, currentSum)`. Correctly handles arrays of all negative values by starting with the first element.
+- **Complexity:** Time: $\mathcal{O}(N)$ &nbsp;|&nbsp; Space: $\mathcal{O}(1)$ auxiliary
+- **Input & Output:**
+  ```text
+  Input:                                Output:
+  9                                     6  (Subarray [4, -1, 2, 1])
+  -2 1 -3 4 -1 2 1 -5 4
+  ```
+- **Canonical Implementation:**
+  ```java
+  int currentSum = sc.nextInt();
+  int maxSum = currentSum;
+  for (int i = 1; i < n; i++) {
+      int value = sc.nextInt();
+      currentSum = Math.max(value, currentSum + value);
+      maxSum = Math.max(maxSum, currentSum);
+  }
+  System.out.println(maxSum);
+  ```
+- **Execution:** `cd "Lab Tasks/03-Maximum-Profit-Analyzer-Kadane" && javac Task3.java && java Task3`
 
-#### 5. Banking Transaction System (Experiment 5)
-- **Problem:** Model an atomic transactional ledger that processes `Deposit` and `Withdraw` commands while defending balance invariants.
-- **Design:** Encapsulated `BankAccount` domain entity with a `private int balance` field. Direct field modifications are forbidden; mutations are channeled through validated `deposit(amount)` and `withdraw(amount)` methods.
-- **Run:** `cd "Lab Tasks/05-Banking-Transaction-System-OOP" && javac Task5.java && java Task5`
+---
 
-#### 6. Ride Sharing Platform Simulator (Experiment 6)
-- **Problem:** Dispatch trip requests across polymorphic fleets (`Bike`, `Auto`, `Cab`) with differential tariff models while capturing invalid ride categories and negative trip distances.
-- **Design:** Abstract base `Vehicle` defining `abstract int calculateFare(int distance)`. Concrete subclasses implement rates ($5$/km for Bike, $12$/km for Auto and Cab). A custom checked exception `InvalidBookingException` defends constructor and parser invariants.
-- **Run:** `cd "Lab Tasks/06-RideSharing-Platform-Simulator" && javac Task6.java && java Task6`
+#### 4. Intelligent DNA Pattern Search Using KMP (Experiment 4)
+- **Directory:** [`04-DNA-Pattern-Search-KMP`](./Lab%20Tasks/04-DNA-Pattern-Search-KMP/) &nbsp;\|&nbsp; **Source:** [`Task4.java`](./Lab%20Tasks/04-DNA-Pattern-Search-KMP/Task4.java)
+- **Problem Statement:** Given a DNA reference sequence and a target pattern, locate all 0-indexed starting loci where the pattern appears, without rescanning text characters upon mismatches.
+- **Architectural Approach:** Employs the **Knuth-Morris-Pratt (KMP)** algorithm. Constructs the $\pi$ Longest Prefix Suffix (`lps`) failure table of length $M$ in $O(M)$ time. Scans the text monotonically without backtracking: when a mismatch occurs at index $j$, shifts pattern cursor to `lps[j-1]`.
+- **Complexity:** Time: $\mathcal{O}(N + M)$ &nbsp;|&nbsp; Space: $\mathcal{O}(M)$
+- **Input & Output:**
+  ```text
+  Input:                                Output:
+  ABABDABACDABABCABAB                   10
+  ABABCABAB
+  ```
+- **Canonical Implementation:**
+  ```java
+  static int[] buildLPS(String pattern) {
+      int m = pattern.length();
+      int[] lps = new int[m];
+      int len = 0, i = 1;
+      while (i < m) {
+          if (pattern.charAt(i) == pattern.charAt(len)) {
+              lps[i++] = ++len;
+          } else {
+              if (len != 0) len = lps[len - 1];
+              else lps[i++] = 0;
+          }
+      }
+      return lps;
+  }
+  ```
+- **Execution:** `cd "Lab Tasks/04-DNA-Pattern-Search-KMP" && javac Task4.java && java Task4`
+
+---
+
+#### 5. Banking Transaction System Using OOP (Experiment 5)
+- **Directory:** [`05-Banking-Transaction-System-OOP`](./Lab%20Tasks/05-Banking-Transaction-System-OOP/) &nbsp;\|&nbsp; **Source:** [`Task5.java`](./Lab%20Tasks/05-Banking-Transaction-System-OOP/Task5.java)
+- **Problem Statement:** Build an atomic bank ledger to process sequential `Deposit` and `Withdraw` operations while enforcing encapsulation and data integrity.
+- **Architectural Approach:** Models domain entity `BankAccount` with `private int balance` field. Restricts state modifications to explicit public methods `deposit(int amount)` and `withdraw(int amount)`. Exposes read-only status via `getBalance()`.
+- **Complexity:** Time: $\mathcal{O}(N)$ ($\mathcal{O}(1)$ per transaction) &nbsp;|&nbsp; Space: $\mathcal{O}(1)$
+- **Input & Output:**
+  ```text
+  Input:                Output:
+  3                     1300
+  Deposit 1000
+  Withdraw 200
+  Deposit 500
+  ```
+- **Canonical Implementation:**
+  ```java
+  class BankAccount {
+      private int balance = 0;
+      void deposit(int amount)  { balance += amount; }
+      void withdraw(int amount) { balance -= amount; }
+      int getBalance()          { return balance; }
+  }
+  ```
+- **Execution:** `cd "Lab Tasks/05-Banking-Transaction-System-OOP" && javac Task5.java && java Task5`
+
+---
+
+#### 6. Ride Sharing Platform Simulator Using Polymorphism (Experiment 6)
+- **Directory:** [`06-RideSharing-Platform-Simulator`](./Lab%20Tasks/06-RideSharing-Platform-Simulator/) &nbsp;\|&nbsp; **Source:** [`Task6.java`](./Lab%20Tasks/06-RideSharing-Platform-Simulator/Task6.java)
+- **Problem Statement:** Implement a multi-vehicle fare calculation system (`Bike`, `Auto`, `Cab`) that computes trip costs via runtime dynamic dispatch and throws custom checked exceptions on invalid bookings.
+- **Architectural Approach:** Defines an abstract contract `abstract class Vehicle` with `abstract int calculateFare(int distance)`. Concrete classes provide specific rates ($5$/km for Bike, $12$/km for Auto and Cab). Creates a custom checked exception `InvalidBookingException` to reject non-positive distances and unrecognized ride identifiers.
+- **Complexity:** Time: $\mathcal{O}(N)$ ($\mathcal{O}(1)$ per ride dispatch) &nbsp;|&nbsp; Space: $\mathcal{O}(1)$
+- **Input & Output:**
+  ```text
+  Input:                Output:
+  3                     50
+  Bike 10               60
+  Auto 5                Invalid ride type
+  Helicopter 100
+  ```
+- **Canonical Implementation:**
+  ```java
+  abstract class Vehicle {
+      abstract int calculateFare(int distance);
+  }
+  class Bike extends Vehicle {
+      int calculateFare(int distance) { return distance * 5; }
+  }
+  class Auto extends Vehicle {
+      int calculateFare(int distance) { return distance * 12; }
+  }
+  class Cab extends Vehicle {
+      int calculateFare(int distance) { return distance * 12; }
+  }
+  ```
+- **Execution:** `cd "Lab Tasks/06-RideSharing-Platform-Simulator" && javac Task6.java && java Task6`
+
 
 ---
 
