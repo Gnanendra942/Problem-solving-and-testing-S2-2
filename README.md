@@ -9,8 +9,8 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![Roadmap](https://img.shields.io/badge/Roadmap-6_Weeks_+_6_Labs-2ea44f?style=for-the-badge&logo=gitbook&logoColor=white)](#-dual-track-curriculum-roadmap)
 [![Total Solved](https://img.shields.io/badge/Total_Solutions-61_Verified-0969da?style=for-the-badge&logo=codeforces&logoColor=white)](#-summary-statistics)
-[![LeetCode](https://img.shields.io/badge/LeetCode-32_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/)
-[![HackerRank](https://img.shields.io/badge/HackerRank-22_Solved-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-33_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/)
+[![HackerRank](https://img.shields.io/badge/HackerRank-21_Solved-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/)
 [![Lab Tasks](https://img.shields.io/badge/Lab_Tasks-6_Systems-FF6B6B?style=for-the-badge&logo=apachemaven&logoColor=white)](#-applied-java-engineering-lab-tasks)
 [![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-1_Solved-298D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/)
 [![Testing](https://img.shields.io/badge/Testing-Edge_Case_Hardened-8A2BE2?style=for-the-badge&logo=junit5&logoColor=white)](#-software-testing--edge-case-engineering)
@@ -44,18 +44,18 @@ This repository represents an intensive, comprehensive engineering catalog of **
 
 | Track / Platform | 🟢 Easy | 🟡 Medium | 🔴 Hard | Total Solutions | Track Share |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **LeetCode** | 18 | 14 | 0 | **32** | 52.5% |
-| **HackerRank** | 8 | 13 | 1 | **22** | 36.1% |
+| **LeetCode** | 19 | 14 | 0 | **33** | 54.1% |
+| **HackerRank** | 13 | 7 | 1 | **21** | 34.4% |
 | **Applied Lab Tasks** | 2 | 3 | 1 | **6** | 9.8% |
 | **GeeksforGeeks** | 0 | 1 | 0 | **1** | 1.6% |
-| **Overall Repository** | **28** (45.9%) | **31** (50.8%) | **2** (3.3%) | **61** | **100% Complete** |
+| **Overall Repository** | **34** (55.7%) | **25** (41.0%) | **2** (3.3%) | **61** | **100% Complete** |
 
 </div>
 
 ```text
 Difficulty Distribution:
-🟢 Easy:   █████████████████████ (45.9% - 28 Solutions)
-🟡 Medium: ███████████████████████ (50.8% - 31 Solutions)
+🟢 Easy:   ████████████████████████ (55.7% - 34 Solutions)
+🟡 Medium: ██████████████████ (41.0% - 25 Solutions)
 🔴 Hard:   ██ (3.3% - 2 Solutions)
 
 Curriculum Completion: [==================================================] 100% (61/61)
@@ -66,6 +66,30 @@ Curriculum Completion: [==================================================] 100%
 ---
 
 ## 🗺️ Dual-Track Curriculum Roadmap
+
+### 🏛️ Dual-Track Curriculum Architecture
+
+```mermaid
+flowchart TD
+    Repo["⚡ Algorithmic Problem Solving & Applied Systems in Java (61 Solutions)"]
+    
+    Repo --> Track1["Track 1: Algorithmic Mastery (55 Solutions)"]
+    Repo --> Track2["Track 2: Applied Software Engineering Labs (6 Systems)"]
+    
+    Track1 --> W1["Week 1: Arrays, Sorting & Lambdas (7)<br/>• Prefix Sums • Two Pointers • Comparators"]
+    Track1 --> W2["Week 2: In-Place Mutation & Frequency (8)<br/>• In-Place Arrays • Anagrams • Kadane DP • Min-Heap"]
+    Track1 --> W3["Week 3: Collections & Scheduling (10)<br/>• PriorityQueue • Transitive Sort • Calendar Math"]
+    Track1 --> W4["Week 4: 2D Matrices & Subgrid Sums (11)<br/>• 2D Prefix Sums • Ring Rotations • Matrix Product"]
+    Track1 --> W5["Week 5: DP, Sliding Windows & DFA (9)<br/>• Circular Kadane • Dynamic Sliding Window • Atoi State Machine"]
+    Track1 --> W6["Week 6: String Automata & Palindromes (10)<br/>• Expand Center • Z-Algorithm • Periodicity Invariance"]
+    
+    Track2 --> L1["Exp 1: Salary Transformation System<br/>• Declarative Stream API • Map Pipelines"]
+    Track2 --> L2["Exp 2: Real-Time Stream Analytics Engine<br/>• Telemetry Ingestion • Averaging Reducer"]
+    Track2 --> L3["Exp 3: Maximum Profit Analyzer<br/>• Single-Pass Kadane Subarray DP"]
+    Track2 --> L4["Exp 4: Intelligent DNA Pattern Search<br/>• Non-Backtracking KMP LPS Automaton"]
+    Track2 --> L5["Exp 5: Banking Transaction System<br/>• OOP Encapsulation • State Integrity"]
+    Track2 --> L6["Exp 6: Ride Sharing Platform Simulator<br/>• Dynamic Dispatch • Custom Exception Hierarchy"]
+```
 
 ### Track 1: 6-Week Algorithmic Mastery Roadmap
 
@@ -294,6 +318,92 @@ Enterprise architectures decouple business logic through abstract contracts and 
 ```
 
 The `Trip` orchestrator enforces domain invariants (distance $> 0$, known ride type), raising `InvalidBookingException` before calculating fares via dynamic runtime dispatch.
+
+---
+
+### 🔹 9. Linear Z-Algorithm String Matching & Longest Common Prefix (Week 6)
+*Applied in:* [`string-similarity`](./Week-6/string-similarity/solution.java)
+
+Given a string $S$ of length $N$, the Z-algorithm computes the **Z-array** where each entry $Z[i]$ stores the length of the longest substring starting from $S[i]$ that matches a prefix of $S$. Rather than quadratic character comparisons ($O(N^2)$), the algorithm maintains an active match window $[L, R]$ such that $S[L \dots R] = S[0 \dots R-L]$.
+
+$$\text{If } i \le R, \quad Z[i] \ge \min(R - i + 1, Z[i - L])$$
+
+```text
+Index:  0 1 2 3 4 5 6 7 8 9 10
+String: a a b x a a b a a b y
+               [L     R]
+                 ^ i
+Because S[i..R] matches S[i-L..R-L], we reuse Z[i-L] to skip redundant matches!
+```
+
+```java
+public static int[] calculateZ(String s) {
+    int n = s.length();
+    int[] z = new int[n];
+    int l = 0, r = 0;
+    z[0] = n;
+
+    for (int i = 1; i < n; i++) {
+        if (i <= r) {
+            z[i] = Math.min(r - i + 1, z[i - l]);
+        }
+        while (i + z[i] < n && s.charAt(z[i]) == s.charAt(i + z[i])) {
+            z[i]++;
+        }
+        if (i + z[i] - 1 > r) {
+            l = i;
+            r = i + z[i] - 1;
+        }
+    }
+    return z;
+}
+```
+
+> [!TIP]
+> **Complexity Guarantee:** Because the right window boundary $R$ increases monotonically from $0$ to $N$ and characters inside $[L, R]$ are never redundantly re-evaluated, the overall time complexity is strictly bounded by $\mathcal{O}(N)$ with $\mathcal{O}(N)$ auxiliary space.
+
+---
+
+### 🔹 10. Deterministic Finite Automaton (DFA) & 32-Bit Overflow Protection (Week 5)
+*Applied in:* [`0008-string-to-integer-atoi`](./Week-5/0008-string-to-integer-atoi/solution.java)
+
+Converting user-supplied alphanumeric strings into 32-bit signed integers requires robust state validation to reject whitespace drift, handle ambiguous sign indicators, and prevent arithmetic overflow ($[-2^{31}, 2^{31}-1]$) without premature crashes.
+
+```text
+    ┌──────────┐   ' '   ┌──────────┐
+    │  START   ├────────►│  START   │
+    └────┬─────┘         └──────────┘
+         │ '+', '-'
+         ▼
+    ┌──────────┐  Digit  ┌──────────┐  Digit  ┌──────────┐
+    │   SIGN   ├────────►│  DIGITS  ├────────►│  DIGITS  │
+    └──────────┘         └────┬─────┘         └──────────┘
+                              │ Non-digit / End
+                              ▼
+                         ┌──────────┐
+                         │   END    │
+                         └──────────┘
+```
+
+```java
+public int myAtoi(String s) {
+    int i = 0, n = s.length(), sign = 1, total = 0;
+    while (i < n && s.charAt(i) == ' ') i++;
+    if (i < n && (s.charAt(i) == '+' || s.charAt(i) == '-')) {
+        sign = (s.charAt(i++) == '-') ? -1 : 1;
+    }
+    while (i < n && Character.isDigit(s.charAt(i))) {
+        int digit = s.charAt(i++) - '0';
+        // 32-bit overflow guard before mutating accumulator
+        if (total > Integer.MAX_VALUE / 10 || 
+           (total == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
+            return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+        }
+        total = total * 10 + digit;
+    }
+    return total * sign;
+}
+```
 
 ---
 
