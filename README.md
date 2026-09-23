@@ -2,15 +2,15 @@
 
 # ⚡ Algorithmic Problem Solving & Software Engineering in Java
 
-**A production-grade repository documenting 61+ verified algorithmic solutions, data structure designs, and software engineering systems across a rigorous 6-week curriculum and 6 applied laboratory experiments.**
+**A production-grade repository documenting 70 verified algorithmic solutions, data structure designs, and software engineering systems across a rigorous 7-week curriculum and 6 applied laboratory experiments.**
 
 ---
 
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
-[![Roadmap](https://img.shields.io/badge/Roadmap-6_Weeks_+_6_Labs-2ea44f?style=for-the-badge&logo=gitbook&logoColor=white)](#-dual-track-curriculum-roadmap)
-[![Total Solved](https://img.shields.io/badge/Total_Solutions-61_Verified-0969da?style=for-the-badge&logo=codeforces&logoColor=white)](#-summary-statistics)
-[![LeetCode](https://img.shields.io/badge/LeetCode-33_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/)
-[![HackerRank](https://img.shields.io/badge/HackerRank-21_Solved-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/)
+[![Roadmap](https://img.shields.io/badge/Roadmap-7_Weeks_+_6_Labs-2ea44f?style=for-the-badge&logo=gitbook&logoColor=white)](#-dual-track-curriculum-roadmap)
+[![Total Solved](https://img.shields.io/badge/Total_Solutions-70_Verified-0969da?style=for-the-badge&logo=codeforces&logoColor=white)](#-summary-statistics)
+[![LeetCode](https://img.shields.io/badge/LeetCode-38_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/)
+[![HackerRank](https://img.shields.io/badge/HackerRank-25_Solved-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/)
 [![Lab Tasks](https://img.shields.io/badge/Lab_Tasks-6_Systems-FF6B6B?style=for-the-badge&logo=apachemaven&logoColor=white)](#-applied-java-engineering-lab-tasks)
 [![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-1_Solved-298D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/)
 [![Testing](https://img.shields.io/badge/Testing-Edge_Case_Hardened-8A2BE2?style=for-the-badge&logo=junit5&logoColor=white)](#-software-testing--edge-case-engineering)
@@ -27,7 +27,7 @@
 
 This repository represents an intensive, comprehensive engineering catalog of **Algorithmic Problem Solving, Software Testing, and Applied Java Systems** built entirely with **modern Java (Java 17+)**. Engineered with a dual focus on **theoretical mathematical optimality** and **enterprise software design standards**, the codebase is divided into two synergistic tracks:
 
-1. **Track 1: Master Algorithmic Curriculum (Weeks 1 – 6):** 55 production-hardened solutions covering prefix equilibrium, symmetric two-pointers, in-place partitions, heap scheduling, 2D integral images, circular Kadane dynamic programming, deterministic finite automata (DFA), and linear pattern matching (Z-Algorithm & KMP).
+1. **Track 1: Master Algorithmic & System Design Curriculum (Weeks 1 – 7):** 64 production-hardened solutions covering prefix equilibrium, symmetric two-pointers, in-place partitions, heap scheduling, 2D integral images, circular Kadane dynamic programming, deterministic finite automata (DFA), linear pattern matching (Z-Algorithm & KMP), direct-addressing hash sets, stateful doubly linked list browser navigation, composite route aggregation, and hierarchical N-ary tree preorder traversal.
 2. **Track 2: Applied Software Engineering & Systems Labs (Experiments 1 – 6):** 6 end-to-end applied Java systems demonstrating declarative stream pipelines, high-throughput real-time sensor analytics, streaming profit optimization, DNA sequence search using Knuth-Morris-Pratt, encapsulated banking state machines, and polymorphic ride-sharing architectures with custom checked exceptions.
 
 ### Core Architectural Pillars
@@ -44,22 +44,22 @@ This repository represents an intensive, comprehensive engineering catalog of **
 
 | Track / Platform | 🟢 Easy | 🟡 Medium | 🔴 Hard | Total Solutions | Track Share |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **LeetCode** | 19 | 14 | 0 | **33** | 54.1% |
-| **HackerRank** | 13 | 7 | 1 | **21** | 34.4% |
-| **Applied Lab Tasks** | 2 | 3 | 1 | **6** | 9.8% |
-| **GeeksforGeeks** | 0 | 1 | 0 | **1** | 1.6% |
-| **Overall Repository** | **34** (55.7%) | **25** (41.0%) | **2** (3.3%) | **61** | **100% Complete** |
+| **LeetCode** | 21 | 17 | 0 | **38** | 54.3% |
+| **HackerRank** | 13 | 11 | 1 | **25** | 35.7% |
+| **Applied Lab Tasks** | 2 | 3 | 1 | **6** | 8.6% |
+| **GeeksforGeeks** | 0 | 1 | 0 | **1** | 1.4% |
+| **Overall Repository** | **36** (51.4%) | **32** (45.7%) | **2** (2.9%) | **70** | **100% Complete** |
 
 </div>
 
 ```text
 Difficulty Distribution:
-🟢 Easy:   ████████████████████████ (55.7% - 34 Solutions)
-🟡 Medium: ██████████████████ (41.0% - 25 Solutions)
-🔴 Hard:   ██ (3.3% - 2 Solutions)
+🟢 Easy:   ██████████████████████ (51.4% - 36 Solutions)
+🟡 Medium: ████████████████████ (45.7% - 32 Solutions)
+🔴 Hard:   █ (2.9% - 2 Solutions)
 
-Curriculum Completion: [==================================================] 100% (61/61)
-- 55 Core Algorithmic Curriculum Problems (Weeks 1 to 6)
+Curriculum Completion: [==================================================] 100% (70/70)
+- 64 Core Algorithmic & System Design Curriculum Problems (Weeks 1 to 7)
 -  6 Enterprise & Laboratory Engineering Systems (Experiments 1 to 6)
 ```
 
@@ -71,9 +71,9 @@ Curriculum Completion: [==================================================] 100%
 
 ```mermaid
 flowchart TD
-    Repo["⚡ Algorithmic Problem Solving & Applied Systems in Java (61 Solutions)"]
+    Repo["⚡ Algorithmic Problem Solving & Applied Systems in Java (70 Solutions)"]
     
-    Repo --> Track1["Track 1: Algorithmic Mastery (55 Solutions)"]
+    Repo --> Track1["Track 1: Algorithmic & System Design (64 Solutions)"]
     Repo --> Track2["Track 2: Applied Software Engineering Labs (6 Systems)"]
     
     Track1 --> W1["Week 1: Arrays, Sorting & Lambdas (7)<br/>• Prefix Sums • Two Pointers • Comparators"]
@@ -82,6 +82,7 @@ flowchart TD
     Track1 --> W4["Week 4: 2D Matrices & Subgrid Sums (11)<br/>• 2D Prefix Sums • Ring Rotations • Matrix Product"]
     Track1 --> W5["Week 5: DP, Sliding Windows & DFA (9)<br/>• Circular Kadane • Dynamic Sliding Window • Atoi State Machine"]
     Track1 --> W6["Week 6: String Automata & Palindromes (10)<br/>• Expand Center • Z-Algorithm • Periodicity Invariance"]
+    Track1 --> W7["Week 7: OO Design, Generics & Trees (9)<br/>• Doubly Linked Lists • System Design • N-ary DFS • Generics"]
     
     Track2 --> L1["Exp 1: Salary Transformation System<br/>• Declarative Stream API • Map Pipelines"]
     Track2 --> L2["Exp 2: Real-Time Stream Analytics Engine<br/>• Telemetry Ingestion • Averaging Reducer"]
@@ -91,7 +92,7 @@ flowchart TD
     Track2 --> L6["Exp 6: Ride Sharing Platform Simulator<br/>• Dynamic Dispatch • Custom Exception Hierarchy"]
 ```
 
-### Track 1: 6-Week Algorithmic Mastery Roadmap
+### Track 1: 7-Week Algorithmic & System Design Roadmap
 
 | Module | Core Domain | Algorithmic Paradigms & Data Structures | Problems | Status |
 | :---: | :--- | :--- | :---: | :---: |
@@ -101,7 +102,8 @@ flowchart TD
 | [**Week 4**](./Week-4/README.md) | **2D Matrices & Transformations** | 2D Integral Images (Inclusion-Exclusion), Concentric Ring Rotations, Transpositions | 11 | ✅ Verified |
 | [**Week 5**](./Week-5/README.md) | **Subarrays, DP & State Machines** | Circular Kadane's Optimization, Dynamic Sliding Windows, Deterministic Finite Automata | 9 | ✅ Verified |
 | [**Week 6**](./Week-6/README.md) | **Advanced Strings & Palindromes** | Expand Around Center, String Periodicity Invariance, Linear Z-Algorithm Matching | 10 | ✅ Verified |
-| **Subtotal** | **Algorithmic Curriculum** | **Data Structures & Competitive Problem Solving** | **55** | **100% Complete** |
+| [**Week 7**](./Week-7/README.md) | **OO Design, Generics & Inheritance** | Custom Data Structures, Doubly Linked List Navigation, Composite Hashing, N-ary Tree DFS, Generics | 9 | ✅ Verified |
+| **Subtotal** | **Algorithmic Curriculum** | **Data Structures, OOP & Competitive Problem Solving** | **64** | **100% Complete** |
 
 ### Track 2: Applied Software Engineering & Systems Lab Tasks
 
@@ -407,6 +409,102 @@ public int myAtoi(String s) {
 
 ---
 
+### 🔹 11. State-Preserving Doubly Linked List Navigation & History Truncation (Week 7)
+*Applied in:* [`1472-design-browser-history`](./Week-7/1472-design-browser-history/solution.java)
+
+Modeling tab navigation history requires bidirectional traversal (`back` and `forward`) coupled with forward-history invalidation upon visiting a new destination. An array-based list incurs $O(N)$ shifts when truncating forward elements, whereas a **Doubly Linked List** achieves **$O(1)$ constant-time truncation and appending**.
+
+```text
+Initial State:
+[leetcode.com] <---> [google.com] <---> [facebook.com] (curr)
+                                              ^
+Action: visit("youtube.com")
+1. Allocate Node("youtube.com")
+2. curr.next = new_node; new_node.prev = curr;
+3. curr = new_node
+(Forward history is naturally truncated as the old reference chain is unlinked)
+
+Result:
+[leetcode.com] <---> [google.com] <---> [facebook.com] <---> [youtube.com] (curr)
+```
+
+```java
+public class Node {
+    String url;
+    Node next, prev;
+    public Node(String url) {
+        this.url = url;
+    }
+}
+
+// Invariant: Visiting unlinks forward branch in O(1)
+public void visit(String url) {
+    Node node = new Node(url);
+    curr.next = node;
+    node.prev = curr;
+    curr = node;
+}
+
+public String back(int steps) {
+    while (curr.prev != null && steps-- > 0) {
+        curr = curr.prev;
+    }
+    return curr.url;
+}
+
+public String forward(int steps) {
+    while (curr.next != null && steps-- > 0) {
+        curr = curr.next;
+    }
+    return curr.url;
+}
+```
+
+---
+
+### 🔹 12. Hierarchical N-ary Tree Preorder Traversal & Tombstone Masking (Week 7)
+*Applied in:* [`1600-throne-inheritance`](./Week-7/1600-throne-inheritance/solution.java)
+
+Monarchical succession algorithms model dynasty lines as dynamic **N-ary Trees**. The succession rule strictly follows **Depth-First Search (Preorder Traversal)**: parent first, followed by each child's complete dynasty sub-branch in order of birth. When a member dies, removing the node would disrupt the subtree connectivity; hence, nodes are marked with a **tombstone boolean flag (`isAlive = false`)**, skipping them during traversal without altering order invariants.
+
+```text
+            King (alive)
+           /            \
+      Alice (dead)     Bob (alive)
+      /          \
+  Jack (alive)  Jill (alive)
+
+Succession Preorder Traversal:
+1. King        -> alive? YES -> [King]
+2. Alice       -> alive? NO  -> skipped
+3. Jack        -> alive? YES -> [King, Jack]
+4. Jill        -> alive? YES -> [King, Jack, Jill]
+5. Bob         -> alive? YES -> [King, Jack, Jill, Bob]
+Final Inheritance Order: [King, Jack, Jill, Bob]
+```
+
+```java
+public List<String> getInheritanceOrder() {
+    List<String> result = new ArrayList<>();
+    dfs(this.king, result);
+    return result;
+}
+
+private void dfs(Person node, List<String> result) {
+    if (node == null) return;
+    // Tombstone check: filter out deceased monarchs in O(1)
+    if (node.isAlive()) {
+        result.add(node.name());
+    }
+    // Recursive preorder dive across birth-ordered children
+    for (Person child : node.children()) {
+        dfs(child, result);
+    }
+}
+```
+
+---
+
 ## 📚 Week-by-Week Algorithmic Curriculum
 
 ### 🔹 Week 1: Arrays, Sorting Basics & Java Lambdas
@@ -521,6 +619,25 @@ public int myAtoi(String s) {
 | 🧩 **[Palindrome Index](./Week-6/palindrome-index/)** | HackerRank | 🟢 Easy | Two-Pointer Lookahead Mismatch Repair | $O(N)$ | $O(1)$ | [Java](./Week-6/palindrome-index/solution.java) |
 | ⚡ **[String Similarity](./Week-6/string-similarity/)** | HackerRank | 🟡 Medium | Z-Algorithm (Longest Common Prefix Array) | $O(N)$ | $O(N)$ | [Java](./Week-6/string-similarity/solution.java) |
 | 🔤 **[Two Strings](./Week-6/two-strings/)** | HackerRank | 🟢 Easy | Bitmask / Character Set Matching | $O(A+B)$ | $O(1)$ | [Java](./Week-6/two-strings/solution.java) |
+
+---
+
+### 🔹 Week 7: Object-Oriented Design, Generics & Inheritance
+
+> **Focus:** Class-level system design, doubly linked list browser navigation, composite-key route aggregation, hierarchical N-ary tree preorder DFS, Java generics, and class inheritance.  
+> 📖 **Deep Dive:** [Week 7 README](./Week-7/README.md)
+
+| Problem | Platform | Difficulty | Algorithmic Paradigm | Time | Space | Source Code |
+| :--- | :---: | :---: | :--- | :---: | :---: | :---: |
+| 🗃️ **[705. Design HashSet](./Week-7/0705-design-hashset/)** | LeetCode | 🟢 Easy | Direct Addressing / Boolean Array Lookup | $O(1)$ | $O(N)$ | [Java](./Week-7/0705-design-hashset/solution.java) |
+| 🚇 **[1396. Design Underground System](./Week-7/1396-design-underground-system/)** | LeetCode | 🟡 Medium | Dual HashMaps / Composite Route Aggregator | $O(1)$ / op | $O(P + S^2)$ | [Java](./Week-7/1396-design-underground-system/solution.java) |
+| 🔀 **[1470. Shuffle the Array](./Week-7/1470-shuffle-the-array/)** | LeetCode | 🟢 Easy | Array Interleaving / Index Mapping | $O(N)$ | $O(N)$ | [Java](./Week-7/1470-shuffle-the-array/solution.java) |
+| 🌐 **[1472. Design Browser History](./Week-7/1472-design-browser-history/)** | LeetCode | 🟡 Medium | Doubly Linked List Navigation & Truncation | $O(\text{steps})$ | $O(N)$ | [Java](./Week-7/1472-design-browser-history/solution.java) |
+| 👑 **[1600. Throne Inheritance](./Week-7/1600-throne-inheritance/)** | LeetCode | 🟡 Medium | N-ary Tree Preorder DFS + Tombstone Mask | $O(N)$ | $O(N)$ | [Java](./Week-7/1600-throne-inheritance/solution.java) |
+| 📝 **[Grading Students](./Week-7/grading/)** | HackerRank | 🟡 Medium | Modulo Arithmetic / Next Multiple-of-5 Rounding | $O(N)$ | $O(N)$ | [Java](./Week-7/grading/solution.java) |
+| 🔧 **[Java Generics](./Week-7/java-generics/)** | HackerRank | 🟡 Medium | Type-Safe Generic Method Parameterization | $O(N)$ | $O(1)$ | [Java](./Week-7/java-generics/solution.java) |
+| 🐾 **[Java Inheritance I](./Week-7/java-inheritance-1/)** | HackerRank | 🟡 Medium | Class Extension & Method Inheritance | $O(1)$ | $O(1)$ | [Java](./Week-7/java-inheritance-1/solution.java) |
+| 🧬 **[Java Inheritance II](./Week-7/java-inheritance-2/)** | HackerRank | 🟡 Medium | Subclass Method Specialization | $O(1)$ | $O(1)$ | [Java](./Week-7/java-inheritance-2/solution.java) |
 
 ---
 
@@ -792,6 +909,34 @@ class MasterVerificationTest {
         String result = tokens[0].equals("0") ? "0" : String.join("", tokens);
         assertEquals("0", result);
     }
+
+    @Test
+    @DisplayName("Verify Browser History: Forward History Invalidation & Navigation")
+    void testBrowserHistoryNavigation() {
+        BrowserHistory browser = new BrowserHistory("leetcode.com");
+        browser.visit("google.com");
+        browser.visit("facebook.com");
+        browser.visit("youtube.com");
+        assertEquals("facebook.com", browser.back(1));
+        assertEquals("google.com", browser.back(1));
+        assertEquals("facebook.com", browser.forward(1));
+        browser.visit("linkedin.com"); // Truncates forward history
+        assertEquals("linkedin.com", browser.forward(2)); // Boundary check: at most 0 forward
+        assertEquals("facebook.com", browser.back(1));
+    }
+
+    @Test
+    @DisplayName("Verify Throne Inheritance: Preorder DFS and Dead-Node Masking")
+    void testThroneInheritanceOrder() {
+        ThroneInheritance t = new ThroneInheritance("king");
+        t.birth("king", "andy");
+        t.birth("king", "bob");
+        t.birth("andy", "catherine");
+        t.death("andy");
+        List<String> order = t.getInheritanceOrder();
+        // Andy is dead, so Catherine succeeds before Bob, while Andy is excluded
+        assertEquals(List.of("king", "catherine", "bob"), order);
+    }
 }
 ```
 
@@ -886,18 +1031,32 @@ Problem-solving-and-testing-S2-2/
 │   ├── maxsubarray/                                # HackerRank Kadane Subarray & Subsequence
 │   └── the-birthday-bar/                           # HackerRank Fixed Sliding Window
 │
-└── Week-6/                                         # Week 6: Advanced String Algorithms & Palindromes (10 Problems)
-    ├── README.md                                   # Week 6 Detailed Syllabus
-    ├── 0005-longest-palindromic-substring/         # LeetCode 5
-    ├── 0028-find-the-index-of-the-first-occurrence-in-a-string/ # LeetCode 28
-    ├── 0438-find-all-anagrams-in-a-string/         # LeetCode 438
-    ├── 0459-repeated-substring-pattern/            # LeetCode 459
-    ├── 0796-rotate-string/                         # LeetCode 796
-    ├── circular-palindromes/                       # HackerRank Circular Palindromes
-    ├── mars-exploration/                           # HackerRank Modulo Periodicity
-    ├── palindrome-index/                           # HackerRank Lookahead Mismatch Repair
-    ├── string-similarity/                          # HackerRank Z-Algorithm
-    └── two-strings/                                # HackerRank Bitmask Match
+├── Week-6/                                         # Week 6: Advanced String Algorithms & Palindromes (10 Problems)
+│   ├── README.md                                   # Week 6 Detailed Syllabus
+│   ├── 0005-longest-palindromic-substring/         # LeetCode 5
+│   ├── 0028-find-the-index-of-the-first-occurrence-in-a-string/ # LeetCode 28
+│   ├── 0438-find-all-anagrams-in-a-string/         # LeetCode 438
+│   ├── 0459-repeated-substring-pattern/            # LeetCode 459
+│   ├── 0796-rotate-string/                         # LeetCode 796
+│   ├── circular-palindromes/                       # HackerRank Circular Palindromes
+│   ├── mars-exploration/                           # HackerRank Modulo Periodicity
+│   ├── palindrome-index/                           # HackerRank Lookahead Mismatch Repair
+│   ├── string-similarity/                          # HackerRank Z-Algorithm
+│   └── two-strings/                                # HackerRank Bitmask Match
+│
+└── Week-7/                                         # Week 7: OO Design, Generics & Inheritance (9 Problems)
+    ├── README.md                                   # Week 7 Detailed Syllabus
+    ├── 0705-design-hashset/                        # LeetCode 705
+    │   ├── README.md
+    │   └── solution.java
+    ├── 1396-design-underground-system/             # LeetCode 1396
+    ├── 1470-shuffle-the-array/                     # LeetCode 1470
+    ├── 1472-design-browser-history/                # LeetCode 1472
+    ├── 1600-throne-inheritance/                    # LeetCode 1600
+    ├── grading/                                    # HackerRank Grading Students
+    ├── java-generics/                              # HackerRank Java Generics
+    ├── java-inheritance-1/                         # HackerRank Java Inheritance I
+    └── java-inheritance-2/                         # HackerRank Java Inheritance II
 ```
 
 ---
@@ -921,7 +1080,7 @@ cd Problem-solving-and-testing-S2-2
 ```
 
 ### Compiling & Running Algorithmic Solutions
-Every problem directory in `Week-1` through `Week-6` houses a standalone `solution.java` file:
+Every problem directory in `Week-1` through `Week-7` houses a standalone `solution.java` file:
 
 ```bash
 # Example 1: Run Week 5 Circular Kadane Algorithm
@@ -933,6 +1092,11 @@ java Solution
 cd "../../Week-6/string-similarity"
 javac solution.java
 java Solution
+
+# Example 3: Run Week 7 Browser History Navigation
+cd "../../Week-7/1472-design-browser-history"
+javac solution.java
+java BrowserHistory
 ```
 
 ### Compiling & Running Applied Lab Tasks

@@ -11,7 +11,7 @@
 [![LeetCode](https://img.shields.io/badge/LeetCode-5-FFA116.svg?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/)
 [![HackerRank](https://img.shields.io/badge/HackerRank-5-2EC866.svg?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/)
 
-[⬅️ **Prev: Week 5**](../Week-5/README.md) &nbsp;•&nbsp; [🏠 **Main Repository**](../README.md)
+[⬅️ **Prev: Week 5**](../Week-5/README.md) &nbsp;•&nbsp; [🏠 **Main Repository**](../README.md) &nbsp;•&nbsp; [➡️ **Next: Week 7**](../Week-7/README.md)
 
 </div>
 
@@ -129,6 +129,6 @@ java Solution
 
 <div align="center">
 
-[⬅️ Back to Week 5](../Week-5/README.md) &nbsp;•&nbsp; [🏠 Main README](../README.md)
+[⬅️ Back to Week 5](../Week-5/README.md) &nbsp;•&nbsp; [🏠 Main README](../README.md) &nbsp;•&nbsp; [➡️ Next: Week 7](../Week-7/README.md)
 
 </div>
