@@ -1,0 +1,7 @@
+# Auto-detect text files and normalize line endings
+* text=auto eol=lf
+
+# Preserve master curriculum documentation against automatic merge clobbering
+README.md merge=ours
+Week-7/README.md merge=ours
+Lab\ Tasks/README.md merge=ours
